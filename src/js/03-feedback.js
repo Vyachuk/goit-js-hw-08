@@ -20,6 +20,8 @@ ref.form.addEventListener('input', throttle(e => {
 
 ref.form.addEventListener('submit', e => {
     e.preventDefault();
+    console.log(`Email: ${ref.form.elements.email.value}`);
+    console.log(`Message: ${ref.form.elements.message.value}`);
     ref.form.reset();
     storage.remove("feedback-form-state");
 })
